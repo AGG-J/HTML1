@@ -6,34 +6,57 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="submit.php" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="gender">Gender:</label>
-        <input type="radio" id="male" name="gender" value="male" required>
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female" required>
-        <label for="female">Female</label><br><br>
-        
-        <label for="country">Country:</label>
-        <select id="country" name="country" required>
-            <option value="">Select</option>
-            <option value="us">United States</option>
-            <option value="ca">Canada</option>
-            <option value="uk">United Kingdom</option>
-        </select><br><br>
-        
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea><br><br>
-        
-        <input type="checkbox" id="subscribe" name="subscribe">
-        <label for="subscribe">Subscribe to newsletter</label><br><br>
-        
-        <input type="submit" value="Submit">
+    <form action="./result.html" method="get">
+        <br>
+        <fieldset>
+            <h2>회원등록</h2>
+            <div>
+                <label for="name">이름 : </label>
+                <input type="text" name="name" autocomplete="on" required>
+            </div>
+            <div>
+                <label for="Email">이메일 : </label>
+                <input type="text" name="Email" autocomplete="on" required>
+            </div>
+            <div>
+                <label for="age">나이 : </label>
+                <input type="number" name="age" min="0" max="100">
+            </div>
+
+            <div>
+                <label for="gender">성별 : </label>
+                <input type="radio" name="gender" value="male">
+                <label for="gender_1">male</label>
+                <input type="radio" name="gender" value="female">
+                <label for="gender_2">female</label>
+            </div>
+            <div>
+                <label for="country">국적 : </label>
+                <select name="country">
+                    <option value="ko">대한민국</option>
+                    <option value="us">미국</option>
+                    <option value="jp">일본</option>
+                    <option value="cn">중국</option>
+                    <option value="uk">영국</option>
+                    <option value="ca">캐나다</option>
+                </select>
+            </div>
+
+            <label for="intro">상태메세지 : </label>
+            <div>
+                <textarea name="intro" rows="10" cols="30"></textarea>
+            </div>
+
+            <div>
+                <input type="checkbox" name="accept" value="ad_email">
+                <label for="accept_1">이메일 수신 동의</label>
+                <input type="checkbox" name="accept" value="ad_sms">
+                <label for="accept_2">문자 수신 동의</label>
+            </div>
+            <div>
+                <button type="submit">제출</button>
+            </div>
+        </fieldset>
     </form>
 </body>
 </html>
